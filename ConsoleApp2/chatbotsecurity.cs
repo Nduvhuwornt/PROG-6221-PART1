@@ -19,7 +19,7 @@ namespace CybersecurityChatbot
             while (true)
             {
                 ConsoleUI.ShowPrompt(UserName);
-                string input = Console.ReadLine()?.Trim().ToLower();
+                string input = Console.ReadLine()?.Trim()?.ToLower() ?? string.Empty;
 
                 // Input validation (rubric requirement)
                 if (string.IsNullOrEmpty(input))

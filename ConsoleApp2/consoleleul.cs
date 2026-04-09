@@ -54,17 +54,33 @@ namespace CybersecurityChatbot
         private static extern bool PlaySound(string pszSound, IntPtr hmod, uint fdwSound);
 
         // Beautiful ASCII art logo
-        public static void DisplayAsciiArt()
+        public static void DisplayAsciiArtSecurityBot()
         {
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine(@"
-   _____ _           _                  _____                           _   
-  / ____| |         | |                / ____|                         | |  
- | |    | | ___  ___| |__   ___  ___  | |  __  __ _ _ __ ___   ___  ___| |_ 
- | |    | |/ _ \/ __| '_ \ / _ \/ __| | | |_ |/ _` | '_ ` _ \ / _ \/ __| __|
- | |____| |  __/ (__| | | |  __/\__ \ | |__| | (_| | | | | | |  __/\__ \ |_ 
-  \_____|_|\___|\___|_| |_|\___||___/  \_____|\__,_|_| |_| |_|\___||___/\__|
-            ");
+  ██████╗██╗  ██╗ █████╗ ████████╗██████╗  ██████╗ ████████╗
+ ██╔════╝██║  ██║██╔══██╗╚══██╔══╝██╔══██╗██╔═══██╗╚══██╔══╝
+ ██║     ███████║███████║   ██║   ██████╔╝██║   ██║   ██║   
+ ██║     ██╔══██║██╔══██║   ██║   ██╔══██╗██║   ██║   ██║   
+ ╚██████╗██║  ██║██║  ██║   ██║   ██████╔╝╚██████╔╝   ██║   
+  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═════╝  ╚═════╝    ╚═╝   
+
+   [ CHATBOT SECURITY AWARENESS BOT ]
+");
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(@"
+> initializing secure assistant...
+> scanning threats ............ OK
+> firewall status ............. ACTIVE
+> encryption layer ............ ENABLED
+> user awareness module ....... LOADED
+
+[✔] Stay alert
+[✔] Think before you click
+[✔] Security is everyone's responsibility
+");
+
             Console.ResetColor();
             Console.WriteLine("═══════════════════════════════════════════════════════════════════════\n");
         }
@@ -75,12 +91,13 @@ namespace CybersecurityChatbot
             Console.Write("👋 Hello! What is your name? ");
             Console.ResetColor();
 
-            string name = Console.ReadLine()?.Trim();
+            // Ensure we never assign a null to a non-nullable string
+            string name = Console.ReadLine()?.Trim() ?? string.Empty;
 
             while (string.IsNullOrEmpty(name))
             {
                 ConsoleUI.ShowError("❌ Name cannot be empty. Please enter your name:");
-                name = Console.ReadLine()?.Trim();
+                name = Console.ReadLine()?.Trim() ?? string.Empty;
             }
             return name;
         }

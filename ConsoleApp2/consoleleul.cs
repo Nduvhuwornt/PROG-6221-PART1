@@ -54,11 +54,11 @@ namespace CybersecurityChatbot
         private static extern bool PlaySound(string pszSound, IntPtr hmod, uint fdwSound);
 
         // Beautiful ASCII art logo
-        public static void DisplayAsciiArtSecurityBot()
+        public static void DisplayAsciiArt()
         {
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(@"
-  ██████╗██╗  ██╗ █████╗ ████████╗██████╗  ██████╗ ████████╗
+   ██████╗██╗  ██╗ █████╗ ████████╗██████╗  ██████╗ ████████╗
  ██╔════╝██║  ██║██╔══██╗╚══██╔══╝██╔══██╗██╔═══██╗╚══██╔══╝
  ██║     ███████║███████║   ██║   ██████╔╝██║   ██║   ██║   
  ██║     ██╔══██║██╔══██║   ██║   ██╔══██╗██║   ██║   ██║   
@@ -66,21 +66,7 @@ namespace CybersecurityChatbot
   ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═════╝  ╚═════╝    ╚═╝   
 
    [ CHATBOT SECURITY AWARENESS BOT ]
-");
-
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(@"
-> initializing secure assistant...
-> scanning threats ............ OK
-> firewall status ............. ACTIVE
-> encryption layer ............ ENABLED
-> user awareness module ....... LOADED
-
-[✔] Stay alert
-[✔] Think before you click
-[✔] Security is everyone's responsibility
-");
-
+            ");
             Console.ResetColor();
             Console.WriteLine("═══════════════════════════════════════════════════════════════════════\n");
         }
@@ -91,13 +77,12 @@ namespace CybersecurityChatbot
             Console.Write("👋 Hello! What is your name? ");
             Console.ResetColor();
 
-            // Ensure we never assign a null to a non-nullable string
-            string name = Console.ReadLine()?.Trim() ?? string.Empty;
+            string name = Console.ReadLine()?.Trim();
 
             while (string.IsNullOrEmpty(name))
             {
                 ConsoleUI.ShowError("❌ Name cannot be empty. Please enter your name:");
-                name = Console.ReadLine()?.Trim() ?? string.Empty;
+                name = Console.ReadLine()?.Trim();
             }
             return name;
         }

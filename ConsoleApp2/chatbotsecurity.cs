@@ -62,7 +62,7 @@ namespace CybersecurityChatbot
                 return "✅ Always check the URL, use HTTPS websites, and avoid clicking unknown links.";
 
             // Default response
-            return "Hmm... I didn’t quite understand that. Try asking about password safety, phishing, or safe browsing?";
+            return "Sory... I didn’t quite understand that. Try asking about password safety, phishing, or safe browsing?";
         }
     }
 }

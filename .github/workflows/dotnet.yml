@@ -1,0 +1,36 @@
+name: .NET CI - ConsoleApp2
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'        # Required for full .slnx support (.NET 9.0.200+)
+
+    - name: Restore dependencies
+      run: dotnet restore ConsoleApp2.slnx
+
+    - name: Build solution
+      run: dotnet build ConsoleApp2.slnx --configuration Release --no-restore
+
+    - name: Run tests (if you have any)
+      run: dotnet test ConsoleApp2.slnx --configuration Release --no-build --verbosity normal
+      # You can safely remove this step if your project has no test projects
+
+    # Optional: Publish the console app as a single file (useful for releases)
+    # - name: Publish
+    #   run: dotnet publish ConsoleApp2/ConsoleApp2.csproj --configuration Release --self-contained false -o publish
+    #   if: github.ref == 'refs/heads/main'

@@ -31,5 +31,7 @@ This is a basic C# console app. It demonstrates a modern .NET project using the 
 dotnet run --project ConsoleApp2/ConsoleApp2.csproj
 
 # Or build via the solution file
-dotnet build ConsoleApp2.slnx
+dotnet build ConsoleApp2.slnx    
 dotnet run --project ConsoleApp2/ConsoleApp2.csproj --configuration Release
+<img width="1911" height="1078" alt="workflow" src="https://github.com/user-attachments/assets/d46fa636-7790-4eb5-8233-bba1ffc019bd" />
+

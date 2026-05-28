@@ -11,6 +11,7 @@ namespace CybersecurityChatbot
         // Voice Greeting
         public static void PlayVoiceGreeting()
         {
+
             try
             {
                 // Resolve file from app output so both `dotnet run` and published exe find it.
@@ -63,7 +64,7 @@ namespace CybersecurityChatbot
  ██║     ███████║███████║   ██║   ██████╔╝██║   ██║   ██║   
  ██║     ██╔══██║██╔══██║   ██║   ██╔══██╗██║   ██║   ██║   
  ╚██████╗██║  ██║██║  ██║   ██║   ██████╔╝╚██████╔╝   ██║   
-  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═════╝  ╚═════╝    ╚═╝   
+  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═════╝  ╚═════╝    ╚═╝   security
 
    [ CHATBOT SECURITY AWARENESS BOT ]
             ");

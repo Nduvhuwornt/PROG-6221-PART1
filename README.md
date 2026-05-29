@@ -1,37 +1,41 @@
-# ConsoleApp2  
+# Cybersecurity Awareness Chatbot
 
+A modern **WPF Desktop Chatbot** built to educate users about cybersecurity best practices.
 
-A simple .NET Console Application built with the new **.slnx** solution format.
+## Features
 
-## Overview
+### Core Functionality
+- **Interactive Chat Interface** with clean, modern dark theme
+- **Real-time conversation** with natural flow
+- **Quick Topic Buttons** for instant access to common topics
 
-This is a basic C# console app. It demonstrates a modern .NET project using the clean XML-based `.slnx` solution file (introduced in .NET 9 / Visual Studio 2022 17.14+).
+### Advanced AI Features
+- **Intent Classification** – Understands user intentions (greeting, asking for tips, expressing concern, etc.)
+- **Memory System** – Remembers user's name and favorite cybersecurity topic
+- **Sentiment Detection** – Responds empathetically when user is worried or frustrated
+- **Smart Keyword Recognition** – Recognizes multiple related terms (e.g., "scam" → phishing)
+- **Varied Responses** – Uses random selection from multiple answers to avoid repetition
+- **Conversation Flow** – Handles follow-up questions like "tell me more", "another tip", "explain again"
+
+### User Experience
+- **Audio Greeting** – Plays welcome sound on startup
+- **Name Personalization** – User can set their name
+- **Error Handling** – Graceful responses for unknown inputs
+- **Clear Chat** functionality
+
+### Cybersecurity Topics Covered
+- Password Security
+- Phishing & Scams
+- Privacy Protection
+- Malware Defense
 
 ## Project Structure
-├── ConsoleApp2.slnx          # New XML solution file
-├── ConsoleApp2/              # Main project folder
-│   ├── ConsoleApp2.csproj
-│   ├── Program.cs
-│   └── ...
-├── .github/
-│   └── workflows/
-│       └── dotnet.yml        # GitHub Actions CI pipeline
-└── README.md                                                            
-
-## Prerequisites
-
-- [.NET 9 SDK](https://dotnet.microsoft.com/download) or later (required for full `.slnx` support)
-
-## How to Run
-
-### From the command line
-
-```bash
-# Restore, build and run
-dotnet run --project ConsoleApp2/ConsoleApp2.csproj
-
-# Or build via the solution file
-dotnet build ConsoleApp2.slnx    
-dotnet run --project ConsoleApp2/ConsoleApp2.csproj --configuration Release
-<img width="1911" height="1078" alt="workflow" src="https://github.com/user-attachments/assets/d46fa636-7790-4eb5-8233-bba1ffc019bd" />
-
+ConsoleApp2/
+├── ConsoleApp2.csproj
+├── Program.cs
+├── App.xaml (optional)
+├── ChatbotWindow.xaml
+├── ChatbotWindow.xaml.cs
+├── greeting.wav
+├── .slnx solution file
+└── README.md

@@ -1,16 +1,18 @@
-﻿using System;
-using System.Windows;
+using CybersecurityChatbot.Forms;
 
 namespace CybersecurityChatbot
 {
-    public class Program
+    /// <summary>
+    /// Application entry point for the Cybersecurity Awareness Chatbot.
+    /// PROG6221 — Programming 2A — POE
+    /// </summary>
+    internal static class Program
     {
         [STAThread]
         static void Main()
         {
-            var app = new Application();
-            var window = new ChatbotWindow();
-            app.Run(window);
+            ApplicationConfiguration.Initialize();
+            Application.Run(new MainForm());
         }
     }
 }
